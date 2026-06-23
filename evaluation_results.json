@@ -1,0 +1,66 @@
+{
+  "n_evaluated": 500,
+  "systems": {
+    "dense": {
+      "rouge1": 0.4502,
+      "rouge2": 0.3407,
+      "rougeL": 0.3959,
+      "abstain_rate": 0.0,
+      "answer_rate": 1.0,
+      "bertscore_f1": 0.8923
+    },
+    "bm25": {
+      "rouge1": 0.2574,
+      "rouge2": 0.0743,
+      "rougeL": 0.1699,
+      "abstain_rate": 0.0,
+      "answer_rate": 1.0,
+      "bertscore_f1": 0.8508
+    },
+    "hybrid": {
+      "rouge1": 0.4472,
+      "rouge2": 0.3294,
+      "rougeL": 0.3869,
+      "abstain_rate": 0.0,
+      "answer_rate": 1.0,
+      "bertscore_f1": 0.8917
+    },
+    "threshold": {
+      "rouge1": 0.2852,
+      "rouge2": 0.219,
+      "rougeL": 0.2525,
+      "abstain_rate": 0.42,
+      "answer_rate": 0.58,
+      "bertscore_f1": 0.8997
+    },
+    "aurora": {
+      "rouge1": 0.2798,
+      "rouge2": 0.2105,
+      "rougeL": 0.2441,
+      "abstain_rate": 0.384,
+      "answer_rate": 0.616,
+      "bertscore_f1": 0.892
+    },
+    "false_gen_rate": {
+      "dense": 1.0,
+      "bm25": 1.0,
+      "hybrid": 1.0,
+      "threshold": 0.5885,
+      "aurora": 0.0
+    }
+  },
+  "routing": {
+    "generate": {
+      "count": 43,
+      "pct": 0.086
+    },
+    "escalate": {
+      "count": 265,
+      "pct": 0.53
+    },
+    "insufficient": {
+      "count": 192,
+      "pct": 0.384
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AURORA V2</title>
+</head>
+<body>
+
+<h2>AURORA V2</h2>
+
+<input type="text" id="query" size="80">
+<button onclick="ask()">Ask</button>
+
+<pre id="result"></pre>
+
+<script>
+async function ask() {
+
+    const query =
+        document.getElementById("query").value;
+
+    const response = await fetch(
+        "http://127.0.0.1:8000/ask",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({query})
+        }
+    );
+
+    const data = await response.json();
+
+    document.getElementById("result")
+        .textContent =
+        JSON.stringify(data, null, 2);
+}
+</script>
+
+</body>
+</html>

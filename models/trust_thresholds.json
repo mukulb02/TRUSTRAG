@@ -1,0 +1,7 @@
+{
+  "generate_threshold": 0.64,
+  "escalation_threshold": 0.23999999463558197,
+  "roc_auc": 0.6238,
+  "label_separation": 0.082,
+  "note": "Calibrated from precision-recall analysis on held-out test split"
+}
